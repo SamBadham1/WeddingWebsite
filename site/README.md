@@ -32,13 +32,13 @@ Every push to GitHub builds the site into a container and deploys it to Cloud Ru
 Replace `PROJECT_ID` and `PROJECT_NUMBER` (both on the GCP console's project dashboard).
 
 1. Push this repository (`weddingWebsite/`) to GitHub.
-2. Turn on the services and create the image repository:
+2. Turn on the services and create the image repository. The `wedding` repository is shared with the RSVP site, so skip the last command if it already exists; the two keep their images under different names.
    ```sh
    gcloud config set project PROJECT_ID
    gcloud services enable cloudbuild.googleapis.com run.googleapis.com artifactregistry.googleapis.com
    gcloud artifacts repositories create wedding --repository-format=docker --location=australia-southeast1
    ```
-3. Create a service account for the builds and give it only what it needs:
+3. Choose the account the builds run as. The RSVP site and wedding agent already use the Compute Engine default service account (`PROJECT_NUMBER-compute@developer.gserviceaccount.com`) with these permissions, so you can skip this step and pick that account in the trigger. Or create a dedicated account that can only do what this build needs:
    ```sh
    gcloud iam service-accounts create wedding-build --display-name="Wedding site builds"
    SA=wedding-build@PROJECT_ID.iam.gserviceaccount.com
@@ -53,7 +53,7 @@ Replace `PROJECT_ID` and `PROJECT_NUMBER` (both on the GCP console's project das
    - **Region**: `australia-southeast1`.
    - **Event**: push to a branch. **Source**: connect GitHub and pick the repository. **Branch**: `^main$`, or whichever branch you publish from.
    - **Configuration**: Cloud Build configuration file, location `cloudbuild.yaml`.
-   - **Service account**: `wedding-build`.
+   - **Service account**: the Compute Engine default account, or `wedding-build` if you created it in step 3.
 5. Push, or click **Run** on the trigger. The site's address (`https://wedding-site-….run.app`) is under **Cloud Run → wedding-site**.
 
 ### Custom domain
