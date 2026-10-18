@@ -1,0 +1,78 @@
+/* Page layout around the design-system components. Values come from tokens.css. */
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--surface); color: var(--ink);
+  font: 400 17px/28px var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+#root { min-height: 100vh; display: flex; flex-direction: column; }
+main { flex: 1; }
+a { color: inherit; }
+:where(a, button):focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
+
+.site-skip {
+  position: absolute; left: var(--space-4); top: calc(-1 * var(--space-16)); z-index: 10;
+  padding: var(--space-2) var(--space-4); background: var(--surface-raised); color: var(--ink);
+}
+.site-skip:focus { top: var(--space-4); }
+
+/* ---------- Header: full-width ground behind the centred nav ---------- */
+.site-header { background: var(--surface); border-bottom: 1px solid var(--line); }
+.site-header--forest { background: var(--forest); border-bottom-color: transparent; }
+.site-header .wd-nav { border-bottom: 0; }
+
+.site-menu-toggle {
+  display: none; min-height: 44px; padding: 0; background: none; border: 0; color: inherit; cursor: pointer;
+  font: 500 12px/16px var(--font-sans); letter-spacing: .2em; text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  .wd-nav { flex-wrap: wrap; padding: var(--space-3) var(--space-4); }
+  .site-menu-toggle { display: block; }
+  .wd-nav__links { display: none; width: 100%; flex-direction: column; gap: 0; padding-bottom: var(--space-2); }
+  .wd-nav__links[data-open="true"] { display: flex; }
+  .wd-nav__links a { display: inline-block; padding: var(--space-3) 0; }
+}
+
+/* ---------- Sections ---------- */
+.site-section { padding: var(--space-24) var(--space-8); }
+.site-section--surface { background: var(--surface); }
+.site-section--sunk { background: var(--surface-sunk); }
+.site-section__inner { max-width: var(--measure-page); margin: 0 auto; }
+@media (max-width: 600px) {
+  .site-section { padding: var(--space-16) var(--space-4); }
+}
+
+.site-prose { max-width: var(--measure-text); margin: 0 auto; }
+.site-prose p { margin: 0 0 var(--space-4); }
+.site-prose > :last-child { margin-bottom: 0; }
+.site-prose--centred { text-align: center; }
+.site-subtitle { margin: 0 0 var(--space-4); }
+
+.site-actions {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-4);
+  margin-top: var(--space-8);
+}
+
+/* ---------- FAQ ---------- */
+.site-faq__item { padding: var(--space-6) 0; border-top: 1px solid var(--line); }
+.site-faq__item:last-child { border-bottom: 1px solid var(--line); }
+.site-faq__question {
+  margin-bottom: var(--space-2);
+  font: 500 15px/26px var(--font-sans); letter-spacing: .12em; text-transform: uppercase;
+}
+.site-faq dd { margin: 0 0 var(--space-2); color: var(--ink-muted); }
+.site-faq dd:last-child { margin-bottom: 0; }
+
+/* ---------- Footer: forest ground, lace text ---------- */
+.site-footer {
+  background: var(--forest); color: var(--lace); text-align: center;
+  padding: var(--space-16) var(--space-4);
+}
+.site-footer p { margin: 0; }
+.site-footer .site-footer__mark { margin-bottom: var(--space-4); font-family: var(--font-script); font-size: 36px; line-height: 1.2; }
+.site-footer__details {
+  font: 500 12px/20px var(--font-sans); letter-spacing: .2em; text-transform: uppercase; color: var(--sage);
+}

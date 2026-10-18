@@ -1,0 +1,59 @@
+<!-- @dsCard height=288 -->
+<!doctype html>
+<html lang="en">
+<head><link rel="stylesheet" href="../../tokens.css"><link rel="stylesheet" href="../bundle.css">
+<meta charset="utf-8">
+<title>Samuel &amp; Samantha</title>
+<style>
+  html, body { margin:0; height:100%; }
+  body { background:var(--surface); color:var(--ink); font-family:var(--font-sans); overflow:hidden; }
+  .cover { position:relative; width:960px; height:288px; overflow:hidden; }
+  .art { position:absolute; top:0; left:480px; width:480px; height:288px; overflow:hidden; }
+  .art svg { display:block; }
+  .forest { fill:var(--forest); }
+  [data-theme="dark"] .forest { fill:var(--forest-deep); }
+  .moss { fill:var(--moss); }
+  .sage { fill:var(--sage); }
+  .lace { fill:var(--lace); }
+  .deep { fill:var(--forest); }
+  .frame { fill:none; stroke:var(--lace); stroke-width:2; }
+  .words { position:absolute; left:var(--space-8); bottom:var(--space-6); max-width:440px; }
+  .name { margin:0; font-family:var(--font-script); font-weight:400; font-size:100px; line-height:1; color:var(--ink); }
+  .name span { display:block; }
+  .tag { margin:var(--space-3) 0 0 4px; font-size:13px; line-height:20px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-muted); }
+</style>
+</head>
+<body>
+<div class="cover">
+<div class="art" aria-hidden="true">
+<svg viewBox="0 0 480 288" width="480" height="288">
+<!--
+  blocks      forest 232x280 slab bled off the top (the card itself) holding a moss 168x200 panel inside a lace hairline frame; moss 120x224 bled off the right; sage 88x128 for relief - about 40% of 960x288
+  arrangement one tall slab with satellites, bottoms on one line space-6 above the edge, space-4 gutters
+  pattern     the card's chamfered panel: cut-lg corners on the frame and panel, cut-sm-scale octagon tiles at a space-8 pitch, lace on moss and forest on sage - from "Chamfered corners, taken from the clipped corners of the moss panel"
+  scales      gutters space-4; insets space-6 and space-8; pitch space-8; corners cut-lg (28) and cut-sm (5 on 16px tiles); everything else radius-0
+-->
+<rect class="forest" x="24" y="-16" width="232" height="280"/>
+<polygon class="frame" points="74,22 206,22 234,50 234,218 206,246 74,246 46,218 46,50"/>
+<polygon class="moss" points="80,32 200,32 224,56 224,212 200,236 80,236 56,212 56,56"/>
+<rect class="sage" x="272" y="136" width="88" height="128"/>
+<rect class="moss" x="376" y="40" width="120" height="224"/>
+<polygon class="lace" points="397,64 403,64 408,69 408,75 403,80 397,80 392,75 392,69"/>
+<polygon class="lace" points="461,64 467,64 472,69 472,75 467,80 461,80 456,75 456,69"/>
+<polygon class="lace" points="429,96 435,96 440,101 440,107 435,112 429,112 424,107 424,101"/>
+<polygon class="lace" points="397,128 403,128 408,133 408,139 403,144 397,144 392,139 392,133"/>
+<polygon class="lace" points="461,128 467,128 472,133 472,139 467,144 461,144 456,139 456,133"/>
+<polygon class="lace" points="429,160 435,160 440,165 440,171 435,176 429,176 424,171 424,165"/>
+<polygon class="lace" points="397,192 403,192 408,197 408,203 403,208 397,208 392,203 392,197"/>
+<polygon class="lace" points="461,192 467,192 472,197 472,203 467,208 461,208 456,203 456,197"/>
+<polygon class="deep" points="301,160 307,160 312,165 312,171 307,176 301,176 296,171 296,165"/>
+<polygon class="deep" points="333,160 339,160 344,165 344,171 339,176 333,176 328,171 328,165"/>
+</svg>
+</div>
+<div class="words">
+<h1 class="name"><span>Samuel &amp;</span><span>Samantha</span></h1>
+<p class="tag">Man O War, Waiheke · April 17, 2027</p>
+</div>
+</div>
+</body>
+</html>

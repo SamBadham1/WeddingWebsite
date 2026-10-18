@@ -1,0 +1,29 @@
+{
+  "heading": { "eyebrow": "Getting there", "title": "Travel" },
+  "intro": "Waiheke is a short ferry ride from central Auckland. Ferries leave regularly, so plan to arrive with time to spare.",
+  "sections": [
+    {
+      "title": "The Ferry",
+      "body": [
+        "Ferries to Waiheke leave from downtown Auckland and arrive at Matiatia Wharf. Check the timetable before you travel and book ahead on busy weekends."
+      ],
+      "links": [{ "label": "Auckland to Waiheke timetable", "href": "https://www.fullers.co.nz/timetables-and-fares/?from=AUCK&to=WAIH" }]
+    },
+    {
+      "title": "To the Venue",
+      "body": [
+        "Man O War is at the eastern end of the island, a drive from the wharf. We'll share transport details here once they're confirmed."
+      ]
+    },
+    {
+      "title": "Where to Stay",
+      "body": [
+        "Many guests will want to stay on the island for the night. There are plenty of places on Booking.com and Airbnb; book early, as Waiheke is popular in April."
+      ],
+      "links": [
+        { "label": "Waiheke stays on Booking.com", "href": "https://www.booking.com/region/nz/waiheke-island.en.html" },
+        { "label": "Waiheke stays on Airbnb", "href": "https://www.airbnb.co.nz/s/Waiheke-Island--New-Zealand/homes" }
+      ]
+    }
+  ]
+}

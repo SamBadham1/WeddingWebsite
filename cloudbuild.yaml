@@ -1,0 +1,37 @@
+# Builds the site's container, stores it in Artifact Registry and deploys it to Cloud Run.
+# Run by a Cloud Build trigger on pushes to GitHub; one-time setup is in site/README.md.
+
+substitutions:
+  _REGION: australia-southeast1 # Sydney, the closest region to New Zealand
+  _REPOSITORY: wedding # Artifact Registry repository
+  _SERVICE: wedding-site # Cloud Run service
+
+steps:
+  - id: build
+    name: gcr.io/cloud-builders/docker
+    args: ["build", "-f", "site/Dockerfile", "-t", "${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/${_SERVICE}:$BUILD_ID", "."]
+
+  - id: push
+    name: gcr.io/cloud-builders/docker
+    args: ["push", "${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/${_SERVICE}:$BUILD_ID"]
+
+  - id: deploy
+    name: gcr.io/google.com/cloudsdktool/cloud-sdk:slim
+    entrypoint: gcloud
+    args:
+      - run
+      - deploy
+      - ${_SERVICE}
+      - --image=${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/${_SERVICE}:$BUILD_ID
+      - --region=${_REGION}
+      - --allow-unauthenticated
+      - --port=8080
+      - --memory=256Mi
+      - --max-instances=3 # a cap on cost if the site is ever flooded with traffic
+
+images:
+  - ${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/${_SERVICE}:$BUILD_ID
+
+options:
+  # Required when the trigger runs as a chosen service account rather than the legacy default.
+  logging: CLOUD_LOGGING_ONLY

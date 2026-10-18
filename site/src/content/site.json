@@ -1,0 +1,16 @@
+{
+  "couple": {
+    "names": "Samuel & Samantha",
+    "monogram": "S & S",
+    "nameLines": ["Samuel &", "Samantha"]
+  },
+  "venue": { "name": "Man O War", "area": "Waiheke" },
+  "dateDisplay": "Saturday April 17th 2027",
+  "dateText": "Saturday 17 April 2027",
+  "nav": [
+    { "label": "Home", "href": "/" },
+    { "label": "Schedule", "href": "/schedule" },
+    { "label": "Travel", "href": "/travel" },
+    { "label": "FAQ", "href": "/faq" }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "heading": { "eyebrow": "FAQ", "title": "Questions" },
+  "items": [
+    {
+      "question": "What time should I arrive?",
+      "answer": ["Please arrive by the time on the Schedule page so you're seated before the ceremony begins. Allow extra time for the ferry."]
+    },
+    {
+      "question": "What should I wear?",
+      "answer": ["We'll add the dress code here closer to the day."]
+    },
+    {
+      "question": "How do I get there and back?",
+      "answer": ["The Travel page has the ferry and getting to the venue. We'll add transport details, including the last ferries back to Auckland, once they're confirmed."]
+    },
+    {
+      "question": "I have a dietary requirement. Who do I tell?",
+      "answer": ["Let us know as soon as you can and we'll pass it on to the venue."]
+    },
+    {
+      "question": "Who can I ask about anything else?",
+      "answer": ["Message either of us. We're happy to help."]
+    }
+  ]
+}

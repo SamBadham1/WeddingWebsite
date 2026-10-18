@@ -1,0 +1,67 @@
+/* Samuel & Samantha — generated from tokens.json. Edit tokens.json, not this file. */
+
+@font-face { font-family: "Great Vibes"; src: url("fonts/GreatVibes-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Montserrat"; src: url("fonts/Montserrat-Variable.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap; }
+
+:root, [data-theme="light"] {
+  --forest: #24382a;
+  --forest-deep: #1a2a1f;
+  --moss: #5b6f45;
+  --sage: #b9c4ab;
+  --lace: #f6f4ee;
+  --ivory: #f5f1e8;
+  --surface: var(--ivory);
+  --surface-raised: #fffdf8;
+  --surface-sunk: #ebe6d8;
+  --ink: #1f3024;
+  --ink-muted: #56604f;
+  --line: #d5d0c2;
+  --line-strong: #7d846f;
+  --accent: var(--forest);
+  --accent-hover: var(--forest-deep);
+  --on-accent: var(--lace);
+  --focus: var(--moss);
+}
+
+[data-theme="dark"] {
+  --surface: var(--forest);
+  --surface-raised: #2c4432;
+  --surface-sunk: #1c2d21;
+  --ink: var(--lace);
+  --ink-muted: #c3ccb8;
+  --line: #3f5644;
+  --line-strong: #7f9277;
+  --accent: var(--lace);
+  --accent-hover: #e4e0d4;
+  --on-accent: var(--forest);
+  --focus: #dfe8c9;
+}
+
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+  --radius-0: 0px;
+  --cut-sm: 10px;
+  --cut-lg: 28px;
+  --measure-text: 640px;
+  --measure-page: 1120px;
+  --font-script: "Great Vibes", cursive;
+  --font-sans: Montserrat, "Helvetica Neue", Arial, sans-serif;
+}
+
+.display-names { font-family: var(--font-script); font-size: 118px; line-height: 1.05; font-weight: 400; }
+.script-title { font-family: var(--font-script); font-size: 56px; line-height: 1.15; font-weight: 400; }
+.script-small { font-family: var(--font-script); font-size: 36px; line-height: 1.2; font-weight: 400; }
+.eyebrow { font-family: var(--font-sans); font-size: 13px; line-height: 20px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; }
+.details { font-family: var(--font-sans); font-size: 15px; line-height: 26px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; }
+.nav { font-family: var(--font-sans); font-size: 12px; line-height: 16px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; }
+.lead { font-family: var(--font-sans); font-size: 20px; line-height: 32px; font-weight: 300; }
+.body { font-family: var(--font-sans); font-size: 17px; line-height: 28px; font-weight: 400; }
+.small { font-family: var(--font-sans); font-size: 14px; line-height: 22px; font-weight: 400; }

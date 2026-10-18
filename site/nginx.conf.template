@@ -1,0 +1,23 @@
+server {
+  listen ${PORT};
+  server_name _;
+  server_tokens off;
+  root /usr/share/nginx/html;
+
+  gzip on;
+  gzip_types text/css application/javascript image/svg+xml;
+
+  # Build files have a content hash in their names, so they never change: cache them for a year.
+  location /assets/ {
+    expires 1y;
+    add_header Cache-Control "public, immutable";
+    try_files $uri =404;
+  }
+
+  # Clean URLs like /schedule are routes in the app, so any path that isn't a file gets index.html.
+  # no-cache makes browsers check for a new version on each visit, so updates show straight away.
+  location / {
+    add_header Cache-Control "no-cache";
+    try_files $uri /index.html;
+  }
+}

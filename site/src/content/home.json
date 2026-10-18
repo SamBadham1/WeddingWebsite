@@ -1,0 +1,19 @@
+{
+  "hero": {
+    "eyebrow": "We're getting married",
+    "action": { "label": "The day", "href": "/schedule" }
+  },
+  "intro": {
+    "eyebrow": "Everything in one place",
+    "title": "The Details",
+    "body": [
+      "This is where you'll find everything you need for the day: when to arrive, how the day will run, getting to Waiheke and back, and answers to common questions.",
+      "We'll keep adding to it as plans come together, so check back before you travel."
+    ],
+    "actions": [
+      { "label": "The schedule", "href": "/schedule", "variant": "outline" },
+      { "label": "Travel", "href": "/travel", "variant": "outline" },
+      { "label": "Questions", "href": "/faq", "variant": "outline" }
+    ]
+  }
+}

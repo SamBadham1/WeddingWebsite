@@ -1,0 +1,45 @@
+{
+  "heading": {
+    "eyebrow": "Saturday 17 April 2027",
+    "title": "The Day"
+  },
+  "intro": "Here's how the day will run. Times are a guide for now; we'll confirm the full running order closer to the day.",
+  "events": [
+    {
+      "time": "3:00 pm",
+      "title": "Cocktail Hour",
+      "place": "Man O War",
+      "note": "Canapés on the lawn"
+    },
+    {
+      "time": "5:00 pm",
+      "title": "Ceremony",
+      "place": "Man O War",
+      "note": ""
+    },
+    {
+      "time": "5:45 pm",
+      "title": "Drinks",
+      "place": "Man O War",
+      "note": ""
+    },
+    {
+      "time": "6:30 pm",
+      "title": "Dinner",
+      "place": "Man O War",
+      "note": ""
+    },
+    {
+      "time": "8:30 pm",
+      "title": "Dancing",
+      "place": "Man O War",
+      "note": ""
+    },
+    {
+      "time": "11:00 pm",
+      "title": "Farewell",
+      "place": "Man O War",
+      "note": ""
+    }
+  ]
+}
