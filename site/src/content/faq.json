@@ -3,7 +3,7 @@
   "items": [
     {
       "question": "What time should I arrive?",
-      "answer": ["Please arrive by the time on the Schedule page so you're seated before the ceremony begins. Allow extra time for the ferry."]
+      "answer": ["Please arrive by the 3pm. We will start with cocktails bfore the ceremony so don't miss out."]
     },
     {
       "question": "What should I wear?",
@@ -19,7 +19,7 @@
     },
     {
       "question": "Who can I ask about anything else?",
-      "answer": ["Message either of us. We're happy to help."]
+      "answer": ["Message either of us. We're happy to help. emaile us at samsbadhamgray@gmail.com"]
     }
   ]
 }
