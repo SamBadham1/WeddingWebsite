@@ -11,6 +11,7 @@
     { "label": "Home", "href": "/" },
     { "label": "Schedule", "href": "/schedule" },
     { "label": "Travel", "href": "/travel" },
+    { "label": "Dress Code", "href": "/dress-code" },
     { "label": "FAQ", "href": "/faq" }
   ]
 }

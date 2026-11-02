@@ -56,6 +56,24 @@ a { color: inherit; }
   margin-top: var(--space-8);
 }
 
+/* ---------- Dress code ---------- */
+.site-keywords {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-2) var(--space-6);
+  margin: 0 0 var(--space-6); padding: 0; list-style: none;
+  font: 500 13px/20px var(--font-sans); letter-spacing: .2em; text-transform: uppercase;
+}
+.site-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-8); align-items: start; }
+.site-gallery__item { margin: 0; }
+/* Mood boards are tall collages; show them whole rather than cropping. */
+.site-gallery__item img {
+  display: block; width: 100%; height: auto;
+  clip-path: polygon(var(--cut-lg) 0, 100% 0, 100% calc(100% - var(--cut-lg)), calc(100% - var(--cut-lg)) 100%, 0 100%, 0 var(--cut-lg));
+}
+.site-gallery__item figcaption { margin-top: var(--space-3); text-align: center; color: var(--ink-muted); }
+@media (max-width: 600px) {
+  .site-gallery { grid-template-columns: 1fr; gap: var(--space-6); }
+}
+
 /* ---------- FAQ ---------- */
 .site-faq__item { padding: var(--space-6) 0; border-top: 1px solid var(--line); }
 .site-faq__item:last-child { border-bottom: 1px solid var(--line); }

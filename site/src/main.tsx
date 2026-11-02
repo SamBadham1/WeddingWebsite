@@ -11,6 +11,7 @@ import { Layout } from "./components/Layout";
 import { Home } from "./pages/Home";
 import { Schedule } from "./pages/Schedule";
 import { Travel } from "./pages/Travel";
+import { DressCode } from "./pages/DressCode";
 import { Faq } from "./pages/Faq";
 import { NotFound } from "./pages/NotFound";
 
@@ -22,7 +23,8 @@ createRoot(document.getElementById("root")!).render(
           <Route index element={<Home />} />
           <Route path="schedule" element={<Schedule />} />
           <Route path="travel" element={<Travel />} />
-          <Route path="faq" element={<Faq />} />
+          <Route path="dress-code" element={<DressCode />} />
+          <Route path="faq"element={<Faq />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

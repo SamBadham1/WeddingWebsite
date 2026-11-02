@@ -57,6 +57,22 @@ export interface TravelContent {
   sections: TravelSection[];
 }
 
+export interface ImageItem {
+  /** A path under public/, e.g. "/images/dress-code/look-1.jpg". */
+  src: string;
+  alt: string;
+  caption?: string;
+}
+
+export interface DressCodeContent {
+  heading: Heading;
+  /** The dress code itself, e.g. "Eclectic Formal". */
+  code: string;
+  keywords: string[];
+  body: string[];
+  images: ImageItem[];
+}
+
 export interface FaqItem {
   question: string;
   answer: string[];

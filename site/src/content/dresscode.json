@@ -1,0 +1,20 @@
+{
+  "heading": { "eyebrow": "What to wear", "title": "Dress Code" },
+  "code": "Eclectic Formal",
+  "keywords": ["Outrageous", "Block colours", "Disco vibe"],
+  "body": [
+    "Dress up, and don't hold back. Think formal, with personality: bold block colours, a bit of sparkle and a disco feel."
+  ],
+  "images": [
+    {
+      "src": "/images/dress-code/suits.jpg",
+      "alt": "A collage of suits in bold colours: powder blue, burgundy, mustard, emerald velvet and pink, with patterned ties, embroidered jackets and striped blazers.",
+      "caption": "Suits"
+    },
+    {
+      "src": "/images/dress-code/dresses.jpg",
+      "alt": "A collage of long gowns in goldenrod, coral, olive, magenta and pink beside tropical flowers, with a palette of Goldenrod, Coral Orange, Flower Stem and Crimson Rose.",
+      "caption": "Dresses"
+    }
+  ]
+}
